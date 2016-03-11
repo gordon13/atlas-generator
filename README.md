@@ -8,8 +8,10 @@ Python 2.x
 PIL
 
 # Instructions
-1. Create a folder where you want to do the atlas creation.
+1. Create a folder where you want to do the atlas creation and copy the script to it.
 2. Add the images you want to combine 
 3. A a folder called "generated"
 4. Run script
 5. Check the "generated folder for your texture and json files
+
+Note: the packing algorithm isn't particularly smart. You may need to adjust the "size" variable to change the final texture size 
