@@ -5,6 +5,7 @@ This allows you to work on your texture assets as independant files and combine 
 
 # Requirements
 Python 2.x
+
 PIL
 
 # Instructions
