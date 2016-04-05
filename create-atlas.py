@@ -32,7 +32,7 @@ def generate_atlas_from_images():
 
 
 	for image in sorted_y:
-		if (last_x_pos > start_size):
+		if (last_x_pos + sorted_y[i0][0][1] > start_size):
 			last_x_pos = 0
 			last_y_pos += sorted_y[i0][0][1]
 			i0 = i
@@ -42,7 +42,6 @@ def generate_atlas_from_images():
 
 		new_im.paste(image[2], (last_x_pos, last_y_pos))
 
-		last_x_pos += image[0][0]
 
 		data[image[1]] = {
 			"frame": {"x":last_x_pos,"y":last_y_pos,"w":image[0][0],"h":image[0][1]},
@@ -51,6 +50,7 @@ def generate_atlas_from_images():
 			"spriteSourceSize": {"x":0,"y":0,"w":image[0][0],"h":image[0][1]},
 			"sourceSize": {"w":image[0][0],"h":image[0][1]}
 		}
+		last_x_pos += image[0][0]
 
 		i += 1
 	
